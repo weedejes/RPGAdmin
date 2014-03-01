@@ -9,10 +9,7 @@ class MonsterManual {
 	
 	def loadFromFile(filename: String) = {
 		println("Loading")
-		val img = new Image("file://D:/projects/Scala/RPGAdmin/src/smet/personal/RPGAdmin/data/img/tiles/grass.png")
-		
-		println(img.width)
-		println("____")
+		val img = new Image("smet/personal/RPGAdmin/data/img/monsters/hoop.png")
 		
 		stats("hoop") = new MonsterStats(1, 15, 5)
 		imgs("hoop") = img
@@ -20,7 +17,7 @@ class MonsterManual {
 		imgs("fern") = img
 	}
 
-	def createMonster(name: String) = {
+	def apply(name: String) = {
 		new Monster(stats(name), imgs(name))
 	}
 }

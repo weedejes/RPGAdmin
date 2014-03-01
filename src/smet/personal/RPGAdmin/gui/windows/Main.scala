@@ -23,13 +23,14 @@ import smet.personal.RPGAdmin.npc.MonsterManual
 object Main extends JFXApp {
 	val m = new MonsterManual()
 	m.loadFromFile("'")
-	val monster = m.createMonster("hoop")
+	val monster = m("hoop")
+	
 	val editor = EditWindow
 	val playField = PlayWindow
 	val bounds = Screen.primary.bounds
 
 	stage = new JFXApp.PrimaryStage {
-		title = "Sliding Blocks"
+		title = "RPGAdmin"
 		scene = new Scene(400, 400) {
 			root = editor
 		}
