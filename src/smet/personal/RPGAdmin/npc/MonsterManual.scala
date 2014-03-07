@@ -1,6 +1,7 @@
 package smet.personal.RPGAdmin.npc
 
 import scalafx.scene.image.Image
+import scala.util.Random
 
 class MonsterManual {
 	
@@ -18,6 +19,6 @@ class MonsterManual {
 	}
 
 	def apply(name: String) = {
-		new Monster(stats(name), imgs(name))
+		new Monster(Random.nextInt(3), Random.nextInt(3), stats(name), imgs(name))
 	}
 }

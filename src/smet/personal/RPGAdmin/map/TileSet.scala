@@ -1,6 +1,7 @@
 package smet.personal.RPGAdmin.map
 
 import scalafx.scene.image.Image
+import scala.util.Random
 
 class TileSet {
 
@@ -13,7 +14,7 @@ class TileSet {
 		imgs("grass") = img
 	}
 
-	def apply(name: String) = {
-		new Tile(imgs(name))
+	def apply(x: Int, y: Int, name: String) = {
+		new Tile(x, y, imgs(name))
 	}
 }

@@ -6,12 +6,10 @@ import scalafx.scene.control.Label
 import scalafx.scene.canvas.Canvas
 import scalafx.scene.paint.Color
 import javafx.collections.ListChangeListener
-import smet.personal.RPGAdmin.map.Map
 
 object PlayWindow extends Group {
 
 	val mapViewer = new MapViewer()
-	mapViewer.setMap(new Map(3, 3))
 	children.add(mapViewer)
 
 }

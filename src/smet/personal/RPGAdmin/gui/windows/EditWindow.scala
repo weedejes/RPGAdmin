@@ -21,9 +21,8 @@ import scalafx.scene.control.Toggle
 object EditWindow extends BorderPane {
 
 	// Map Editor
-	val mapEditor = new Group
+	val mapEditor = new MapViewer()
 	val textEditor = new TextField
-	mapEditor.children.addAll(new Label("aaa"), textEditor)
 	
 	
 
